@@ -27,13 +27,17 @@ then
 	exit
 fi
 
-lectures=$(wget -qO - --load-cookies=$cookie "$seriespage" | grep -o "/archive/video/html5/[0-9]*/" | uniq)
+# old tele-task format (in case it will ever be used again
+# lectures=$(wget -qO - --load-cookies=$cookie "$seriespage" | grep -o "/archive/video/html5/[0-9]*/" | uniq)
+
+lectures=$(wget -qO - --load-cookies=$cookie "$seriespage" | grep -o "/lecture/video/[0-9]*/" | uniq)
+
 for videopage in $lectures
 do 
 	echo
 	echo "html5 videopage found: $videopage"
 
-	videos=$(wget -qO - --load-cookies=$cookie "https://www.tele-task.de${videopage}" | egrep -o "http://\S*/(video|desktop)\.mp4")
+	videos=$(wget -qO - --load-cookies=$cookie "https://www.tele-task.de${videopage}" | egrep -o "https?://\S*/(video|desktop)\.mp4")
 
 	for video in $videos
 	do

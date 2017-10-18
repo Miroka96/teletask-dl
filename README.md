@@ -22,8 +22,10 @@ workingdirectory parameter is fully optional
 - Operating Systems 2 (german) ST 17 - see bs2
 - Big Data Analytics (german) WT 16/17 - see bigdata
 - Internet Security: Weaknesses and Targets (english) WT 16/17 - see isec
+- Prozessorientierte Informationssysteme - see pois (with new URL schema)
+
+## Update of Oktober 2017
+Former Tele-Task Beta goes public. Old URLs remain working, they will be redirected. The URL schema had had to be adapted.
 
 ## Restrictions
 Please do not host the videos anywhere else publicly reachable (there might be copyright laws)
-
-The Script currently only supports HTML5-embedded videos and will break as soon as the new layout https://beta.tele-task.de goes online
